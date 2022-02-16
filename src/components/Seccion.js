@@ -6,6 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import Paper from "@mui/material/Paper";
 
 const Seccion = ({ busqueda }) => {
 	const [productos, setProductos] = useState([]);
@@ -23,41 +24,45 @@ const Seccion = ({ busqueda }) => {
 			<Grid container spacing={6} justifyContent="center" alignItems="center">
 				{productos.map((elemento) => (
 					<Grid item key={elemento.id}>
-						<CardActionArea>
-							<Card sx={{ maxWidth: 250, height: 340 }}>
-								<CardMedia
-									component="img"
-									height="150"
-									image={elemento.thumbnail}
-									alt={elemento.title}
-								></CardMedia>
-								<CardContent
-									sx={{
-										display: "flex",
-										justifyContent: "center",
-										alignItems: "center",
-										flexDirection: "column",
-									}}
-								>
-									<Typography
-										variant="h6"
+						<Paper variant="outlined">
+							<CardActionArea>
+								<Card sx={{ maxWidth: 250, height: 340 }}>
+									<CardMedia
+										component="img"
+										height="150"
+										image={elemento.thumbnail}
+										alt={elemento.title}
+									></CardMedia>
+									<CardContent
 										sx={{
 											display: "flex",
 											justifyContent: "center",
 											alignItems: "center",
+											flexDirection: "column",
 										}}
 									>
-										{elemento.title}
-									</Typography>
-									<Typography variant="h6">${elemento.price}</Typography>
-									<Typography variant="body2">{elemento.condition}</Typography>
-									<Typography variant="body2">
-										{elemento.address.state_name}
-									</Typography>
-									<Typography>{elemento.shipping.free_shipping}</Typography>
-								</CardContent>
-							</Card>
-						</CardActionArea>
+										<Typography
+											variant="h6"
+											sx={{
+												display: "flex",
+												justifyContent: "center",
+												alignItems: "center",
+											}}
+										>
+											{elemento.title}
+										</Typography>
+										<Typography variant="h6">${elemento.price}</Typography>
+										<Typography variant="body2">
+											{elemento.condition}
+										</Typography>
+										<Typography variant="body2">
+											{elemento.address.state_name}
+										</Typography>
+										<Typography>{elemento.shipping.free_shipping}</Typography>
+									</CardContent>
+								</Card>
+							</CardActionArea>
+						</Paper>
 					</Grid>
 				))}
 			</Grid>

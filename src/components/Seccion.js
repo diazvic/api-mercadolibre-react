@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import Busqueda from "./Busqueda";
+
 const Seccion = ({ busqueda }) => {
 	const [productos, setProductos] = useState([]);
 

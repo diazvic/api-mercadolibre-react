@@ -7,7 +7,7 @@ import { useState } from "react";
 import "../src/App.css";
 const App = () => {
 	const [valorDelInput, setValorDelInput] = useState("");
-	const [buscarProductos, setBuscarProductos] = useState("labiales");
+	const [buscarProductos, setBuscarProductos] = useState("mates");
 
 	const handleOnChange = (e) => {
 		setValorDelInput(e.target.value);

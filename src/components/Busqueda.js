@@ -4,7 +4,14 @@ import Button from "@mui/material/Button";
 
 const Busqueda = ({ handleOnChange, handleClick }) => {
 	return (
-		<Box sx={{ p: 3 }}>
+		<Box
+			sx={{
+				p: 3,
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+			}}
+		>
 			<TextField
 				onChange={handleOnChange}
 				label="Buscar productos"

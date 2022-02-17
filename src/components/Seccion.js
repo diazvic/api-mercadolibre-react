@@ -34,6 +34,7 @@ const Seccion = ({ busqueda }) => {
 								<Card sx={{ maxWidth: 300, height: 500 }}>
 									<CardMedia
 										component="img"
+										sx={{ width: "100%" }}
 										height="300"
 										image={elemento.thumbnail}
 										alt={elemento.title}
